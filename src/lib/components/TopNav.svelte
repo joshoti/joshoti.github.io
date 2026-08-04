@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { resolve, asset } from '$app/paths';
-	import {
-		GithubSolid,
-		LinkedinSolid,
-		FilePdfSolid,
-		ChevronDownOutline
-	} from 'flowbite-svelte-icons';
+	import GithubSolid from 'flowbite-svelte-icons/GithubSolid.svelte';
+	import LinkedinSolid from 'flowbite-svelte-icons/LinkedinSolid.svelte';
+	import FilePdfSolid from 'flowbite-svelte-icons/FilePdfSolid.svelte';
+	import ChevronDownOutline from 'flowbite-svelte-icons/ChevronDownOutline.svelte';
 
 	let showDropdown = $state(false);
 
