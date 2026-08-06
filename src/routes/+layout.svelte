@@ -15,7 +15,7 @@
 <div class="relative z-0 flex min-h-lvh flex-col px-4 pt-6 pb-32 text-white md:px-12">
 	<TopNav />
 
-	<main class="mx-auto mt-8 w-full max-w-5xl grow text-sm md:mt-16 md:text-base">
+	<main class="mx-auto mt-8 w-full max-w-5xl grow text-sm md:mt-14 md:text-base">
 		{@render children()}
 	</main>
 
