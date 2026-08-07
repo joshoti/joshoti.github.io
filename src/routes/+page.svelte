@@ -6,16 +6,13 @@
 	<Card>
 		<!-- Top Row: Picture + Introduction -->
 		<div
-			// Below just in case centering is needed for mobile
-			// class="mb-6 flex flex-col items-center gap-6 text-center md:mb-8 md:flex-row md:items-start md:gap-8 md:text-left"
 			class="mb-6 flex flex-col items-center gap-6 text-left md:mb-8 md:flex-row md:items-start md:gap-8"
 		>
 			<!-- Profile Picture Square -->
 			<div
 				class="h-40 w-40 shrink-0 overflow-hidden rounded-2xl bg-[#D9D9D9]/65 shadow-2xl backdrop-blur-md md:h-48 md:w-48 md:rounded-3xl"
 			>
-				<!-- <img src="/profilepicture_comp.png" alt="Joshua Oti" class="w-full h-full object-cover" /> -->
-				<img src="/profilepicture-nobg 2.png" alt="Joshua Oti" class="h-full w-full object-cover" />
+				<img src="/profilepicture-nobg.png" alt="Joshua Oti" class="h-full w-full object-cover" />
 			</div>
 
 			<!-- Name, Experience, and Education -->
@@ -23,9 +20,10 @@
 				<h1 class="mb-4 text-center text-2xl font-bold md:text-left md:text-[32px]">Joshua Oti</h1>
 
 				<div class="space-y-2 text-sm text-white/90 md:text-lg">
-					<p>Prev Machine Learning Engineer @ Autodesk</p>
-					<p>MS Computer Science @ University of Southern California</p>
-					<p>B.Eng Mechanical Engineering @ Covenant University</p>
+					<p>Software Development Engineer, Easley-Dunn Productions Inc.</p>
+					<p>Prev Machine Learning Engineer, Autodesk</p>
+					<p>MS Computer Science, University of Southern California</p>
+					<p>B.Eng Mechanical Engineering, Covenant University</p>
 				</div>
 			</div>
 		</div>
@@ -34,8 +32,9 @@
 		<p class="text-sm leading-relaxed text-white/80 md:text-base">
 			Building at the intersection of low-level systems, intelligent software, and physical
 			hardware. Core foundation in Mechanical Engineering—graduating top of my class with hands-on
-			lab experience in soldering, PCB schematic capture, and logic analyzers—paired with a Master’s
-			in Computer Science focused on distributed systems, operating systems, and ML.
+			lab experience across the hardware lifecycle from CAD/CAM & additive manufacturing to PCB
+			schematic capture & electronic failure analysis—paired with a Master’s in Computer Science
+			focused on distributed systems, generative AI, and software engineering.
 		</p>
 	</Card>
 </div>

@@ -9,7 +9,7 @@ const coursePilotProject = {
 		'Engineered a RAG AI Assistant capable of executing natural language UI navigation and exact document citations.',
 		'Built a generative AI engine to dynamically synthesize customized, spaced-repetition flashcards directly from user-uploaded notes.'
 	],
-	domains: ['GenAI', 'Software Engineering'],
+	domains: ['Generative AI', 'Software Engineering'],
 	techs: ['React', 'Python', 'Claude Sonnet', 'Firebase', 'RAG', 'OCR']
 };
 
@@ -37,7 +37,17 @@ const devPortalX = {
 		'Implemented role-based access controls (RBAC) by issuing and validating JWTs to secure API endpoints and user data.',
 		'Integrated DynamoDB for highly scalable data storage alongside analytics tooling, providing end-users with actionable API usage metrics and streamlined API key provisioning.'
 	],
-	techs: ['React', 'Spring Boot', 'OAuth 2.0', 'DynamoDB', 'Spring Security', 'JWT', 'SSO', 'RBAC'],
+	techs: [
+		'React',
+		'Java',
+		'Spring Boot',
+		'OAuth 2.0',
+		'DynamoDB',
+		'Spring Security',
+		'JWT',
+		'SSO',
+		'RBAC'
+	],
 	domains: ['Software Engineering', 'Identity & Access Management (IAM)', 'API Security']
 };
 
@@ -126,7 +136,7 @@ const buildr = {
 		'Cloud Storage',
 		'Image Stitching'
 	],
-	domains: ['Software Engineering', 'Hardware Integration']
+	domains: ['Software Engineering', 'Hardware Engineering']
 };
 
 const biometricPOS = {
@@ -139,7 +149,7 @@ const biometricPOS = {
 		'Developed a highly responsive user interface using QML and Python, bridging high-level logic with optimized C++ hardware integration for rapid biometric scanning and data processing.'
 	],
 	techs: ['Python', 'C++', 'QML', 'Google Cloud', 'Biometrics'],
-	domains: ['Systems Engineering', 'Software Engineering', 'Hardware']
+	domains: ['Systems Engineering', 'Software Engineering', 'Hardware Engineering']
 };
 
 const electricalInstrumentationPortfolio = {
@@ -162,7 +172,7 @@ const electricalInstrumentationPortfolio = {
 	domains: ['Hardware Engineering', 'Electronics']
 };
 
-export {
+const allProjects = [
 	coursePilotProject,
 	autonomousDataAgent,
 	devPortalX,
@@ -173,4 +183,28 @@ export {
 	buildr,
 	biometricPOS,
 	electricalInstrumentationPortfolio
-};
+];
+
+const featuredProjects = [
+	autonomousDataAgent,
+	llmFineTuningBiasOptimization,
+	devPortalX,
+	distributedHealthcareNetwork
+];
+
+const genAiProjects = allProjects.filter((p) => p.domains.includes('Generative AI'));
+const softwareProjects = allProjects.filter((p) => p.domains.includes('Software Engineering'));
+const machineLearningProjects = allProjects.filter((p) => p.domains.includes('Machine Learning'));
+const systemsProjects = allProjects.filter((p) => p.domains.includes('Systems Engineering'));
+
+// Using .some() with .includes() to catch "Hardware Engineering" using the "Hardware" keyword
+const hardwareProjects = allProjects.filter((p) => p.domains.includes('Hardware Engineering'));
+
+export const featuredCategory = { name: 'Featured Projects', projects: featuredProjects };
+export const projectCategories = [
+	{ name: 'Generative AI', projects: genAiProjects },
+	{ name: 'Software Engineering', projects: softwareProjects },
+	{ name: 'Machine Learning', projects: machineLearningProjects },
+	{ name: 'Systems Engineering', projects: systemsProjects },
+	{ name: 'Hardware', projects: hardwareProjects }
+];
