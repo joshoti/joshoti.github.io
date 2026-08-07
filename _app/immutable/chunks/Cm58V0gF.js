@@ -1,0 +1,1 @@
+import{G as e,M as t,b as n,m as r,v as i}from"./DeXpseUM.js";import"./xihTtKlq.js";var a=n(`<span class="inline-flex items-center rounded-full bg-[#D9D9D9]/35 px-4 py-1.5 text-xs font-medium whitespace-nowrap md:text-sm"><!></span>`);function o(n,o){var s=a();r(t(s),()=>o.children),e(s),i(n,s)}export{o as t};

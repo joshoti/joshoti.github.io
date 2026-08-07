@@ -1,0 +1,1 @@
+import{G as e,M as t,b as n,m as r,v as i}from"./DeXpseUM.js";import"./xihTtKlq.js";var a=n(`<div class="w-full rounded-3xl border border-white/5 bg-[#464646]/60 p-6 backdrop-blur-md md:p-8"><!></div>`);function o(n,o){var s=a();r(t(s),()=>o.children),e(s),i(n,s)}export{o as t};
