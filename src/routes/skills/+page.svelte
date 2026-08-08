@@ -28,10 +28,22 @@
 	let carouselRef: HTMLDivElement | null = null;
 
 	const scrollCarousel = (direction: string) => {
-		const scrollAmount = window.innerWidth > 768 ? 650 + 48 : window.innerWidth * 0.85 + 24;
 		if (!carouselRef) return;
-		carouselRef.scrollBy({
-			left: direction === 'right' ? scrollAmount : -scrollAmount,
+
+		// --- MAGIC NUMBERS EXPLAINED ---
+		// Desktop (>768px): 650px (Card width from w-162.5) + 48px (Gap from space-x-12)
+		// Mobile (<=768px): 85vw (Card width from w-[85vw]) + 24px (Approximated gap/padding tolerance)
+		// -------------------------------
+		const scrollAmount = window.innerWidth > 768 ? 650 + 48 : window.innerWidth * 0.85 + 24;
+
+		const currentIndex = Math.round(carouselRef.scrollLeft / scrollAmount);
+		let targetIndex = direction === 'right' ? currentIndex + 1 : currentIndex - 1;
+
+		// Clamp the target index to prevent out-of-bounds scrolling
+		targetIndex = Math.max(0, Math.min(targetIndex, allSkills.length - 1));
+
+		carouselRef.scrollTo({
+			left: targetIndex * scrollAmount,
 			behavior: 'smooth'
 		});
 	};
@@ -53,7 +65,7 @@
 			<!-- Added max-h-[65vh] so it scales down on short mobile screens -->
 			<div class="carousel-item h-95 max-h-[65vh] w-[85vw] md:max-h-none md:w-162.5">
 				<Card>
-					<h2 class="mb-5 text-center text-xl font-bold md:text-2xl md:mb-8">{category.title}</h2>
+					<h2 class="mb-5 text-center text-xl font-bold md:mb-8 md:text-2xl">{category.title}</h2>
 					<div class="flex flex-wrap justify-center gap-4 md:gap-6">
 						{#each category.data as skill (skill)}
 							<Pill>{skill}</Pill>

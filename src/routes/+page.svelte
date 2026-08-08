@@ -12,7 +12,11 @@
 			<div
 				class="h-40 w-40 shrink-0 overflow-hidden rounded-2xl bg-[#D9D9D9]/65 shadow-2xl backdrop-blur-md md:h-48 md:w-48 md:rounded-3xl"
 			>
-				<img src="/img/profilepicture-nobg.png" alt="Joshua Oti" class="h-full w-full object-cover" />
+				<img
+					src="/img/profilepicture-nobg.png"
+					alt="Joshua Oti"
+					class="h-full w-full object-cover"
+				/>
 			</div>
 
 			<!-- Name, Experience, and Education -->
@@ -31,10 +35,11 @@
 		<!-- Full-width Introduction -->
 		<p class="text-sm leading-relaxed text-white/80 md:text-base">
 			Building at the intersection of low-level systems, intelligent software, and physical
-			hardware. Core foundation in Mechanical Engineering—graduating top of my class with hands-on
-			lab experience across the hardware lifecycle from CAD/CAM & additive manufacturing to PCB
-			schematic capture & electronic failure analysis—paired with a Master’s in Computer Science
-			focused on distributed systems, generative AI, and software engineering.
+			hardware. Core foundation is in Mechanical Engineering, graduating at the top of the class.
+			Gained hands-on lab experience across the hardware lifecycle, spanning from CAD/CAM and
+			additive manufacturing to PCB schematic capture and electronic failure analysis. To complement
+			this, earned a Master’s in Computer Science focused on distributed systems, generative AI, and
+			software engineering.
 		</p>
 	</Card>
 </div>
