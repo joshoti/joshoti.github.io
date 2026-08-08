@@ -82,38 +82,38 @@ const llmFineTuningBiasOptimization = {
 	summary:
 		'Benchmarked Llama 3.2-3B architectures to quantify trade-offs between sentiment accuracy and social safety. I engineered custom LoRA adapters with 0.18% trainable parameters for efficient A100 fine-tuning, and evaluated bias shifts using StereoSet metrics to discover prompt safety maximizations.',
 	bullets: [
-		'Benchmarked and optimized decoder (Llama 3.2-3B) and encoder architectures to quantify and evaluate trade-offs between sentiment accuracy and social safety.',
+		'Benchmarked and optimized decoder (Llama 3.2-3B) and encoder (RoBERTa/DeBERTa) architectures to quantify and evaluate trade-offs between sentiment accuracy and social safety.',
 		'Engineered custom LoRA adapters targeting 7 projection layers with 0.18% trainable parameters, enabling highly efficient fine-tuning on A100 GPUs.',
-		'Evaluated language model stability and bias shifts using StereoSet metrics (ICAT, LMS, SS) across 8-shot in-context learning configurations, discovering novel prompt safety maximizations.'
+		'Evaluated language model stability and bias shifts using StereoSet metrics (ICAT, LMS, SS) across multiple in-context learning techniques, discovering that 8-shot prompting optimally maximized safety scores.'
 	],
 	techs: ['PyTorch', 'Transformers', 'Llama 3.2', 'LoRA', 'NLP', 'StereoSet'],
 	domains: ['Generative AI', 'Machine Learning']
 };
 
-const statisticalMachineLearningPortfolio = {
-	title: 'Advanced Machine Learning Portfolio',
+const appliedMachineLearningPortfolio = {
+	title: 'Applied Machine Learning Portfolio',
 	summary:
-		'Developed a comprehensive machine learning portfolio tackling high-dimensional data challenges. I engineered specialized pipelines spanning regularized linear models, tree-based ensembles with SMOTE for class imbalances, and deep learning architectures like custom MLPs and transfer-learning networks for image classification.',
+		'Developed a comprehensive machine learning portfolio tackling high-dimensional data challenges. I engineered specialized pipelines spanning regularized linear models, tree-based ensembles with SMOTE for class imbalances, and deep learning architectures like transfer-learning networks for image classification.',
 	bullets: [
 		'Architected a comprehensive portfolio of machine learning solutions across diverse problem spaces, spanning the full ML lifecycle from foundational statistical models to advanced deep learning architectures.',
 		'Established robust predictive baselines and feature extraction frameworks, implementing regularized linear models (Logistic, LASSO, Ridge) and time-domain processing for multi-sensor data.',
 		'Overcame class imbalances and complex distributions in specialized datasets by engineering ensemble systems (Random Forests, XGBoost) with SMOTE oversampling and cost-complexity pruning to prevent overfitting.',
 		'Built active learning and semi-supervised self-training pipelines using L1-penalized SVMs and Monte Carlo simulations, benchmarking label efficiency against unsupervised Spectral Clustering.',
-		'Expanded modeling capabilities into deep learning by architecting custom Multi-Layer Perceptrons (MLPs) and applying Transfer Learning to deep neural networks to achieve high classification accuracy on images.'
+		'Applied transfer learning to pre-trained vision models (EfficientNetV2, ResNet-50), optimizing feature extraction to achieve high classification accuracy on image datasets.'
 	],
 	techs: [
-		'PyTorch',
+		'TensorFlow',
 		'Scikit-Learn',
+		'Statsmodels',
 		'Deep Learning',
 		'Transfer Learning',
-		'MLPs',
 		'XGBoost',
 		'Random Forests',
 		'SVM',
 		'Time Series',
 		'SMOTE'
 	],
-	domains: ['Machine Learning', 'Deep Learning']
+	domains: ['Applied Machine Learning', 'Deep Learning', 'Computer Vision']
 };
 
 const buildr = {
@@ -179,7 +179,7 @@ const allProjects = [
 	distributedHealthcareNetwork,
 	concurrentRequestOrchestrator,
 	llmFineTuningBiasOptimization,
-	statisticalMachineLearningPortfolio,
+	appliedMachineLearningPortfolio,
 	buildr,
 	biometricPOS,
 	electricalInstrumentationPortfolio
@@ -196,8 +196,6 @@ const genAiProjects = allProjects.filter((p) => p.domains.includes('Generative A
 const softwareProjects = allProjects.filter((p) => p.domains.includes('Software Engineering'));
 const machineLearningProjects = allProjects.filter((p) => p.domains.includes('Machine Learning'));
 const systemsProjects = allProjects.filter((p) => p.domains.includes('Systems Engineering'));
-
-// Using .some() with .includes() to catch "Hardware Engineering" using the "Hardware" keyword
 const hardwareProjects = allProjects.filter((p) => p.domains.includes('Hardware Engineering'));
 
 export const featuredCategory = { name: 'Featured Projects', projects: featuredProjects };

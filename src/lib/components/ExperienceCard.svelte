@@ -28,13 +28,23 @@
 	}>();
 
 	let isExpanded = $state(false);
+	let cardElement = $state<HTMLElement | null>(null);
 
 	const toggleDetails = () => {
+		if (isExpanded && cardElement) {
+			// Scroll back to the top of the card smoothly before shrinking
+			const yOffset = -20; // Optional padding
+			const y = cardElement.getBoundingClientRect().top + window.scrollY + yOffset;
+			window.scrollTo({ top: y, behavior: 'smooth' });
+		}
 		isExpanded = !isExpanded;
 	};
 </script>
 
-<div class="w-full rounded-3xl border border-white/5 bg-[#464646]/60 p-6 backdrop-blur-md md:p-8">
+<div
+	bind:this={cardElement}
+	class="w-full rounded-3xl border border-white/5 bg-[#464646]/60 p-6 backdrop-blur-md md:p-8"
+>
 	<!-- Line 1: Role, Company & Date -->
 	<div class="mb-2 flex flex-col items-start justify-between gap-2 md:flex-row">
 		<h2 class="text-lg font-bold md:text-xl">{role}, {company}</h2>

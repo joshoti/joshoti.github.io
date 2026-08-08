@@ -2,7 +2,7 @@
 	import Card from '$lib/components/Card.svelte';
 </script>
 
-<div class="mt-10 md:mt-20">
+<div class="md:mt-10">
 	<Card>
 		<!-- Top Row: Picture + Introduction -->
 		<div
@@ -12,7 +12,7 @@
 			<div
 				class="h-40 w-40 shrink-0 overflow-hidden rounded-2xl bg-[#D9D9D9]/65 shadow-2xl backdrop-blur-md md:h-48 md:w-48 md:rounded-3xl"
 			>
-				<img src="/profilepicture-nobg.png" alt="Joshua Oti" class="h-full w-full object-cover" />
+				<img src="/img/profilepicture-nobg.png" alt="Joshua Oti" class="h-full w-full object-cover" />
 			</div>
 
 			<!-- Name, Experience, and Education -->

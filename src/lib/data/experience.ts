@@ -28,7 +28,7 @@ const autodeskExperience = {
 		'Owned an enterprise GenAI platform using FastAPI, Azure OpenAI, and AWS S3 to automate workflows. I designed agentic LLM pipelines to optimize reasoning and engineered a gamified Vue.js frontend with SSO, driving a 20% increase in user participation.',
 	bullets: [
 		'Owned the end-to-end lifecycle of an enterprise GenAI content platform using a FastAPI backend, Azure OpenAI, and AWS S3, automating workflows to save 10+ hours weekly.',
-		'Designed agentic LLM pipelines incorporating few-shot prompting strategies to significantly optimize generative model reasoning and image output quality.',
+		'Designed dynamic LLM pipelines incorporating few-shot prompting strategies to significantly optimize generative model reasoning and image output quality.',
 		'Engineered a responsive Vue.js gamified frontend with enterprise SSO integration, driving a 20% increase in user participation through seamless, multi-device accessibility.'
 	],
 	techs: [
@@ -50,13 +50,13 @@ const phasecurveExperience = {
 	role: 'Software Engineer',
 	date: '11/2022 - 09/2024',
 	summary:
-		'Architected a cloud-based ETL backend and event-driven data pipelines using Azure, Flask, and serverless functions. I automated Docker CI/CD deployments and optimized asynchronous content processing, reducing backend latency by 80% while autoscaling to handle 300% more traffic.',
+		'Architected a cloud-based ETL backend and event-driven data pipelines using Azure, Flask, and serverless functions. I automated Docker CI/CD deployments and optimized asynchronous content processing, reducing backend latency by 80% while autoscaling to handle 3x traffic bursts.',
 	bullets: [
-		'Architected a cloud-based ETL and analytics backend utilizing Azure SQL and Flask microservices hosted on Azure App Services, implementing autoscaling to seamlessly handle 300% more traffic on the Tiddix platform.',
+		'Architected a cloud-based ETL and analytics backend using Azure SQL and Flask microservices on Azure App Services, implementing autoscaling to absorb sudden 3x traffic spikes on a fintech platform.',
 		'Engineered event-driven data pipelines using Azure Serverless Functions and Azure Queues for asynchronous social media data extraction, implementing exponential backoff to reliably handle strict third-party API rate limits.',
 		'Automated CI/CD pipelines leveraging GitHub Actions and Docker, containerizing services to ensure reliable deployments and cutting deployment time by 50%.',
-		'Optimized enterprise content uploads with multi-threading and asynchronous processing, reducing backend response latency by 80%, and integrated Azure Application Insights for comprehensive telemetry monitoring to rapidly diagnose pipeline failures.',
-		'Led the migration from the Mailgun API to the Gmail API, optimizing the email routing service and significantly reducing operational costs.'
+		'Optimized content uploads with multi-threading and asynchronous processing, reducing backend response latency by 80%, and integrated Azure Application Insights for telemetry monitoring to rapidly diagnose pipeline failures.',
+		'Led the migration from Mailgun API to Gmail API, optimizing the email routing service and significantly reducing operational costs.'
 	],
 	techs: [
 		'Azure App Services',

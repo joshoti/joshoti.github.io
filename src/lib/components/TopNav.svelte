@@ -4,12 +4,6 @@
 	import LinkedinSolid from 'flowbite-svelte-icons/LinkedinSolid.svelte';
 	import FilePdfSolid from 'flowbite-svelte-icons/FilePdfSolid.svelte';
 	import ChevronDownOutline from 'flowbite-svelte-icons/ChevronDownOutline.svelte';
-
-	let showDropdown = $state(false);
-
-	function toggleDropdown() {
-		showDropdown = !showDropdown;
-	}
 </script>
 
 <header class="mx-auto flex w-full max-w-6xl items-start justify-between">
@@ -36,46 +30,53 @@
 		</a>
 
 		<!-- PDF Dropdown Container -->
-		<div class="relative">
-			<button
-				onclick={toggleDropdown}
+		<!-- Added 'group' to manage the chevron hover/focus states -->
+		<div class="group dropdown dropdown-end">
+			<div
+				tabindex="0"
+				role="button"
 				class="flex items-center gap-1 transition-colors hover:text-gray-300 focus:outline-none"
 			>
 				<FilePdfSolid class="h-6 w-6 md:h-8 md:w-8" />
+				<!-- group-focus-within:rotate-180 dynamically handles the rotation without JS -->
 				<ChevronDownOutline
-					class="h-3 w-3 transition-transform duration-300 md:h-4 md:w-4 {showDropdown
-						? 'rotate-180'
-						: ''}"
+					class="h-3 w-3 transition-transform duration-300 group-focus-within:rotate-180 md:h-4 md:w-4"
 				/>
-			</button>
+			</div>
 
-			{#if showDropdown}
-				<div
-					class="absolute right-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border border-white/10 bg-[#464646]/90 shadow-lg backdrop-blur-md"
-				>
+			<!-- Dropdown Menu -->
+			<ul
+				tabindex="-1"
+				class="menu dropdown-content z-1 mt-2 w-56 overflow-hidden rounded-xl border border-white/10 bg-[#464646]/90 p-2 shadow-lg backdrop-blur-md"
+			>
+				<li>
 					<a
-						href={asset('/resume_aiml.pdf')}
+						href={asset('/pdf/resume_aiml.pdf')}
 						target="_blank"
 						rel="noopener noreferrer"
 						data-sveltekit-reload
-						class="block px-4 py-2 text-sm hover:bg-white/10">AIML Resume</a
+						class="text-sm hover:bg-white/10">AIML Resume</a
 					>
+				</li>
+				<li>
 					<a
-						href={asset('/resume_swe.pdf')}
+						href={asset('/pdf/resume_swe.pdf')}
 						target="_blank"
 						rel="noopener noreferrer"
 						data-sveltekit-reload
-						class="block px-4 py-2 text-sm hover:bg-white/10">SWE Resume</a
+						class="text-sm hover:bg-white/10">SWE Resume</a
 					>
+				</li>
+				<li>
 					<a
-						href={asset('/resume_syseng.pdf')}
+						href={asset('/pdf/resume_syseng.pdf')}
 						target="_blank"
 						rel="noopener noreferrer"
 						data-sveltekit-reload
-						class="block px-4 py-2 text-sm hover:bg-white/10">Systems & Hardware Resume</a
+						class="text-sm hover:bg-white/10">Systems & Hardware Resume</a
 					>
-				</div>
-			{/if}
+				</li>
+			</ul>
 		</div>
 	</div>
 </header>

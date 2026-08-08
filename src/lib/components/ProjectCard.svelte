@@ -21,14 +21,24 @@
 	}>();
 
 	let isExpanded = $state(false);
+	let cardElement = $state<HTMLElement | null>(null);
 
 	const toggleDetails = () => {
+		if (isExpanded && cardElement) {
+			// Scroll back to the top of the card smoothly before shrinking
+			const yOffset = -20; // Optional padding
+			const y = cardElement.getBoundingClientRect().top + window.scrollY + yOffset;
+			window.scrollTo({ top: y, behavior: 'smooth' });
+		}
 		isExpanded = !isExpanded;
 	};
-  // TODO: add caveat and link to project. See `~/proj`
+	// TODO: add caveat and link to project. See `~/proj`
 </script>
 
-<div class="w-full rounded-3xl border border-white/5 bg-[#464646]/60 p-6 backdrop-blur-md md:p-8">
+<div
+	bind:this={cardElement}
+	class="w-full rounded-3xl border border-white/5 bg-[#464646]/60 p-6 backdrop-blur-md md:p-8"
+>
 	<div class="flex flex-col items-start gap-6 md:flex-row">
 		<!-- Conditionally render the image only if an imageUrl is provided -->
 		{#if imageUrl}
