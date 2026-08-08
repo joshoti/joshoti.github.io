@@ -47,7 +47,7 @@
 			<!-- Dropdown Menu -->
 			<ul
 				tabindex="-1"
-				class="menu dropdown-content z-1 mt-2 w-56 overflow-hidden rounded-xl border border-white/10 bg-[#464646]/90 p-2 shadow-lg backdrop-blur-md"
+				class="menu dropdown-content z-50 mt-2 w-56 overflow-hidden rounded-xl border border-white/10 bg-[#464646]/90 p-2 shadow-lg backdrop-blur-md"
 			>
 				<li>
 					<a

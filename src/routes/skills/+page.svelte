@@ -13,6 +13,7 @@
 		certifications,
 		databases
 	} from '$lib/data/skills';
+
 	const allSkills = [
 		languages,
 		aiMl,
@@ -41,51 +42,32 @@
 	<h1 class="text-2xl font-bold md:text-[32px]">Skills</h1>
 </div>
 
-<!-- Full Bleed Carousel Container (Breaks out of standard padding) -->
-<div class="relative right-1/2 left-1/2 z-10 mr-[-50vw] ml-[-50vw] w-screen px-4 md:px-12">
+<!-- Full Bleed Carousel Container -->
+<div class="relative right-1/2 left-1/2 z-10 mr-[-50vw] ml-[-50vw] w-screen">
 	<!-- DaisyUI Carousel -->
 	<div
-		class="no-scrollbar carousel max-w-full carousel-center items-center space-x-6 rounded-box p-4 md:space-x-12"
+		bind:this={carouselRef}
+		class="no-scrollbar carousel w-full carousel-center items-center space-x-4 px-[7.5vw] py-2 md:space-x-12 md:px-[calc(50vw-325px)]"
 	>
-		<!-- All Slides -->
-		<div
-			bind:this={carouselRef}
-			class="no-scrollbar carousel max-w-full carousel-center items-center space-x-6 px-[7.5vw] py-4 md:space-x-12 md:px-[calc(50vw-325px)]"
-		>
-			{#each allSkills as category (category.title)}
-				<div class="carousel-item h-95 w-[85vw] md:w-162.5">
-					<Card>
-						<h2 class="mb-8 text-center text-xl font-bold md:text-2xl">{category.title}</h2>
-						<div class="flex flex-wrap justify-center gap-4 md:gap-6">
-							{#each category.data as skill (skill)}
-								<Pill>{skill}</Pill>
-							{/each}
-						</div>
-					</Card>
-				</div>
-			{/each}
-		</div>
-
-		<!-- TODO: remove after using design inspiration -->
-		<!-- Slide 1: Programming Languages -->
-		<!-- <div class="carousel-item w-[85vw] md:w-[600px]">
-      <Card>
-        <h2 class="text-center text-xl md:text-2xl font-bold mb-8">Programming Languages</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-          <Pill>Python</Pill>
-          <Pill>C++</Pill>
-          <Pill>JavaScript</Pill>
-          <Pill>TypeScript</Pill>
-          <Pill>MATLAB</Pill>
-          <Pill>Go</Pill>
-          <Pill>Rust</Pill>
-        </div>
-      </Card>
-    </div> -->
+		{#each allSkills as category (category.title)}
+			<!-- Added max-h-[65vh] so it scales down on short mobile screens -->
+			<div class="carousel-item h-95 max-h-[65vh] w-[85vw] md:max-h-none md:w-162.5">
+				<Card>
+					<h2 class="mb-5 text-center text-xl font-bold md:text-2xl md:mb-8">{category.title}</h2>
+					<div class="flex flex-wrap justify-center gap-4 md:gap-6">
+						{#each category.data as skill (skill)}
+							<Pill>{skill}</Pill>
+						{/each}
+					</div>
+				</Card>
+			</div>
+		{/each}
 	</div>
 
+	<!-- Carousel Controls (Perfectly flush with the right edge of the center card) -->
+	<!-- The width settings below mirror the carousel item width in order to align perfectly with the center card -->
 	<div
-		class="relative z-10 mb-1 ml-[66vw] inline-flex -translate-x-1/2 items-center gap-6 px-4 md:mb-8"
+		class="relative z-10 mx-auto mt-4 flex w-[85vw] justify-end gap-6 pb-4 md:mt-8 md:w-162.5 md:pb-8"
 	>
 		<!-- Left Carousel Control -->
 		<button
