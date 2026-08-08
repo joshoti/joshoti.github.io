@@ -18,3 +18,27 @@ body {
 	font-family: 'Inter Variable', sans-serif;
 	color: white; /* Enforce strict white text */
 }
+
+/* Background image was applied to the HTML because the body element doesn't cover an 
+ * entire iPhone screen, and applying it to the HTML ensures it covers the full screen */
+html {
+	background: #2a2a2a url('/img/bg_comp1.png') no-repeat center / cover fixed;
+}
+
+@media (max-width: 500px) {
+	html {
+		background-image: url('/img/bg-portrait-blurred.png');
+	}
+}
+
+@layer base {
+	/* Applying background image to ::before pseudo-element did not work as expected, so we apply it directly to the HTML element */
+
+	/* 1. The Blur Overlay Layer */
+	/* You must include the content property in plain CSS for pseudo-elements to render */
+	html::after {
+		content: '';
+
+		@apply pointer-events-none fixed inset-0 -z-10 bg-black/10 backdrop-blur-[6px] max-[500px]:hidden;
+	}
+}
