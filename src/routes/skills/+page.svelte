@@ -98,3 +98,10 @@
 		</button>
 	</div>
 </div>
+
+<!-- On Safari desktop, prevent horizontal overflow due to vertical scrollbar's width -->
+<style>
+	:global(body) {
+		overflow-x: hidden;
+	}
+</style>
