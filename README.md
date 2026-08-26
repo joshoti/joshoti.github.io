@@ -1,4 +1,5 @@
 # joshoti.github.io
+
 Personal website
 
 # sv
@@ -11,6 +12,14 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 ```sh
 npm run dev -- --open
+```
+
+## Deploying
+
+Run the helper script
+
+```sh
+./deploy.sh
 ```
 
 ## Building

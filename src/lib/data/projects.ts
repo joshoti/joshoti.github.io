@@ -16,15 +16,27 @@ const coursePilotProject = {
 const autonomousDataAgent = {
 	title: 'Autonomous Data Agent',
 	summary:
-		'Engineered an agentic web application for natural-language data analysis. Using DeepSeek-R1 and Qwen3, it routes intents through a hybrid SQL/vector RAG pipeline, integrating MCP for safe execution and RAGAS to validate trajectories and ensure factual accuracy.',
+		'Engineered an agentic web application for natural-language data analysis. Orchestrated by LangGraph and powered by MiniMax-m3, it routes intents through a hybrid SQL/vector RAG pipeline with MCP for safe execution. The system utilizes LangSmith for deep trace observability and RAGAS to evaluate answer quality and ensure factual accuracy.',
 	bullets: [
 		'Engineered an agentic web application enabling natural-language querying, automated tool routing, and interactive data analysis over a large-scale movie dataset.',
-		'Architected a hybrid search pipeline (RAG) combining structured SQL queries (SQLite) with semantic vector retrieval (ChromaDB), orchestrated by DeepSeek-R1 and Qwen3 LLMs for intent routing.',
-		'Integrated Model Context Protocol (MCP) tool interfaces to enable safe, programmatic database execution and automated self-correction on complex queries.',
-		'Validating agent decision trajectories and answer generation quality using the RAGAS evaluation framework to prevent model hallucinations and ensure factual accuracy.'
+		'Architected a hybrid RAG pipeline combining SQL (SQLite) and vector retrieval (ChromaDB), orchestrated via LangGraph and MiniMax-m3 for stateful workflow management and intent routing.',
+		'Leveraged Model Context Protocol (MCP) tool interfaces to enable safe, programmatic database execution and automated self-correction on complex queries.',
+		"Integrated LangSmith for deep observability into the agent's execution traces, enabling rapid debugging of complex tool-routing paths and monitoring of token usage.",
+		'Validated agent responses using the RAGAS framework to measure answer quality, mitigate model hallucinations, and ensure factual accuracy.'
 	],
 	domains: ['Generative AI', 'Software Engineering', 'Machine Learning'],
-	techs: ['Python', 'React', 'DeepSeek-R1', 'Qwen3', 'RAG', 'SQLite', 'ChromaDB', 'MCP', 'RAGAS']
+	techs: [
+		'Python',
+		'React',
+		'MiniMax-m3',
+		'LangGraph',
+		'LangSmith',
+		'RAG',
+		'SQLite',
+		'ChromaDB',
+		'MCP',
+		'RAGAS'
+	]
 };
 
 const devPortalX = {
@@ -194,7 +206,13 @@ const featuredProjects = [
 
 const genAiProjects = allProjects.filter((p) => p.domains.includes('Generative AI'));
 const softwareProjects = allProjects.filter((p) => p.domains.includes('Software Engineering'));
-const machineLearningProjects = allProjects.filter((p) => p.domains.includes('Machine Learning'));
+const machineLearningProjects = allProjects.filter((p) =>
+	p.domains.some((domain) => domain.includes('Machine Learning'))
+);
+// --- Case insensitive ---
+// const machineLearningProjects = allProjects.filter((p) =>
+//   p.domains.some((domain) => /machine learning/i.test(domain))
+// );
 const systemsProjects = allProjects.filter((p) => p.domains.includes('Systems Engineering'));
 const hardwareProjects = allProjects.filter((p) => p.domains.includes('Hardware Engineering'));
 
