@@ -4,6 +4,15 @@
 	import ChevronUpOutline from 'flowbite-svelte-icons/ChevronUpOutline.svelte';
 	import Pill from '$lib/components/Pill.svelte';
 
+	type Props = {
+		title?: string;
+		summary?: string;
+		bullets?: string[];
+		domains?: string[];
+		imageUrl?: string;
+		techs?: string[];
+	};
+
 	let {
 		title = 'Project Title',
 		summary = 'Short summary',
@@ -11,14 +20,7 @@
 		domains = [],
 		imageUrl = '',
 		techs = []
-	} = $props<{
-		title?: string;
-		summary?: string;
-		bullets?: string[];
-		domains?: string[];
-		imageUrl?: string;
-		techs?: string[];
-	}>();
+	}: Props = $props();
 
 	let isExpanded = $state(false);
 	let cardElement = $state<HTMLElement | null>(null);

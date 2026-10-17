@@ -1,7 +1,31 @@
+const ringExperience = {
+	company: 'Amazon Ring',
+	role: 'Failure Analysis Engineer',
+	date: '09/2026 - Present',
+	summary:
+		'Conduct failure analysis on returned smart home devices to identify root causes and drive corrective actions. Utilize advanced electrical and physical FA tools to troubleshoot consumer electronics at the PCB level, partnering with contract manufacturers to improve quality.',
+	bullets: [
+		'Perform electrical fault isolation and physical failure analysis (including precision cross-sectioning, parallel lapping, and chemical deprocessing) using advanced tools like SEM, EDX, XRF, FTIR, and X-ray-CT to identify failure locations and root causes.',
+		'Troubleshoot consumer electronics—such as smart doorbell cameras, motion sensors, and security cameras—at the PCB and component level by reading circuit schematics, reviewing layouts, and driving cases from discovery to corrective action.',
+		'Collaborate with contract manufacturers (CM) and OEMs to implement corrective actions, enhance manufacturing processes, and leverage deep knowledge of reliability stress tests, CMOS devices, and IC assembly.'
+	],
+	techs: [
+		'Failure Analysis',
+		'Electrical Fault Isolation',
+		'SEM / EDX',
+		'PCB Troubleshooting',
+		'X-ray',
+		'Consumer Electronics',
+		'Circuit Analysis',
+		'Reliability Testing'
+	],
+	domains: ['Hardware Engineering', 'Failure Analysis']
+};
+
 const easleyDunnExperience = {
 	company: 'Easley-Dunn Productions Inc.',
 	role: 'Software Development Engineer',
-	date: '07/2026 - Present',
+	date: '07/2026 - 09/2026',
 	summary:
 		'Develop user interfaces, core gameplay systems, and backend integrations for the game Robot Race. Working primarily in Unity, I build and debug the supporting systems that connect frontend game client mechanics with backend services.',
 	bullets: [
@@ -85,4 +109,10 @@ const rehboxExperience = {
 	domains: ['HealthTech', 'Machine Learning', 'Software Engineering']
 };
 
-export { easleyDunnExperience, autodeskExperience, phasecurveExperience, rehboxExperience };
+export {
+	ringExperience,
+	easleyDunnExperience,
+	autodeskExperience,
+	phasecurveExperience,
+	rehboxExperience
+};

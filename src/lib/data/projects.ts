@@ -222,5 +222,5 @@ export const projectCategories = [
 	{ name: 'Software Engineering', projects: softwareProjects },
 	{ name: 'Machine Learning', projects: machineLearningProjects },
 	{ name: 'Systems Engineering', projects: systemsProjects },
-	{ name: 'Hardware', projects: hardwareProjects }
+	{ name: 'Hardware Engineering', projects: hardwareProjects }
 ];

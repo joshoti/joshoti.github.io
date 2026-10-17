@@ -24,7 +24,7 @@
 				<h1 class="mb-4 text-center text-2xl font-bold md:text-left md:text-[32px]">Joshua Oti</h1>
 
 				<div class="space-y-2 text-sm text-white/90 md:text-lg">
-					<p>Software Development Engineer, Easley-Dunn Productions Inc.</p>
+					<p>Failure Analysis Engineer, Amazon Ring</p>
 					<p>Prev Machine Learning Engineer, Autodesk</p>
 					<p>MS Computer Science, University of Southern California</p>
 					<p>B.Eng Mechanical Engineering, Covenant University</p>
@@ -38,8 +38,8 @@
 			hardware. Core foundation is in Mechanical Engineering, graduating at the top of the class.
 			Gained hands-on lab experience across the hardware lifecycle, spanning from CAD/CAM and
 			additive manufacturing to PCB schematic capture and electronic failure analysis. To complement
-			this, earned a Master’s in Computer Science focused on distributed systems, generative AI, and
-			software engineering.
+			this, earned a Master’s in Computer Science focused on distributed systems, machine learning,
+			generative AI, and software engineering.
 		</p>
 	</Card>
 </div>

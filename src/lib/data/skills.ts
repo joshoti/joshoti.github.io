@@ -59,7 +59,19 @@ const tools = {
 };
 const hardware = {
 	title: 'Hardware',
-	data: ['Soldering', 'PCB Schematic Capture', 'Oscilloscopes', 'Logic Analyzers', 'CNC Machining']
+	data: [
+		'Soldering',
+		'PCB Schematic Capture',
+		'Oscilloscopes',
+		'Logic Analyzers',
+		'CNC Machining',
+		'Electrical Fault Isolation (EFI)',
+		'Bench Testing',
+		'Scanning Electron Microscopy (SEM)',
+		'Energy-Dispersive X-ray Spectroscopy (EDX)',
+		'PCB & Component-Level Troubleshooting',
+		'Reliability Stress Testing'
+	]
 };
 const certifications = {
 	title: 'Certifications',

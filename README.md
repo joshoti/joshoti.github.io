@@ -16,7 +16,7 @@ npm run dev -- --open
 
 ## Deploying
 
-Run the helper script
+Run the helper script to build and deploy the application
 
 ```sh
 ./deploy.sh

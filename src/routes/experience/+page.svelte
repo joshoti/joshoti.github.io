@@ -4,7 +4,8 @@
 		easleyDunnExperience,
 		autodeskExperience,
 		phasecurveExperience,
-		rehboxExperience
+		rehboxExperience,
+		ringExperience
 	} from '$lib/data/experience';
 </script>
 
@@ -16,6 +17,7 @@
 <!-- Main Content -->
 <div class="mx-auto flex max-w-4xl flex-col gap-6">
 	<!-- Experience Cards -->
+	<ExperienceCard {...ringExperience} />
 	<ExperienceCard {...easleyDunnExperience} />
 	<ExperienceCard {...autodeskExperience} />
 	<ExperienceCard {...phasecurveExperience} />
